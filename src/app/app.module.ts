@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 
-import { NavComponent } from './nav/nav.component';
-import { HeaderComponent } from './header/header.component';
+
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
+
 import { RegisterComponent } from './register/register.component';
-import { HomeuserComponent } from './homeuser/homeuser.component';
+
+import { ActualiteComponent } from './actualite/actualite.component';
+import { AddclubComponent } from './addclub/addclub.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -19,12 +21,15 @@ import { HomeuserComponent } from './homeuser/homeuser.component';
     AppComponent,
     LoginComponent,
    
-    NavComponent,
-    HeaderComponent,
+   
+   
     FooterComponent,
-    HomeComponent,
+   
     RegisterComponent,
-    HomeuserComponent,
+   
+    ActualiteComponent,
+        AddclubComponent,
+        AdminComponent,
    
    
   ],
