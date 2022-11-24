@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { ActualiteComponent } from './actualite/actualite.component';
 import { AddclubComponent } from './addclub/addclub.component';
 import { AdminComponent } from './admin/admin.component';
+import { ClubsComponent } from './clubs/clubs.component';
 
 
 
@@ -30,6 +31,7 @@ import { AdminComponent } from './admin/admin.component';
     ActualiteComponent,
         AddclubComponent,
         AdminComponent,
+        ClubsComponent,
    
    
   ],
