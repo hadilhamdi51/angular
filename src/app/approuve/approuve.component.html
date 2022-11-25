@@ -11,19 +11,21 @@
         <thead class="thead-dark">
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Logo</th>
             <th scope="col">Name</th>
             <th scope="col">Description</th>
-           
+            <th scope="col">Status</th>
+            
             
           </tr>
         </thead>
         <tbody  *ngFor="let club of clubs">
           <tr>
             <th scope="row">1</th>
-            <td class="logo d-flex align-items-center"><img src="{{club.logo}}" alt="image"/></td>
+           
             <td>{{club.nom}}</td>
             <td>{{club.description}}</td>
+            <button type="button" class="btn btn-success">Approve</button>
+            <button type="button"  class="btn btn-danger">Refuse</button>
           </tr>
          
         </tbody>

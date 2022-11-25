@@ -15,7 +15,12 @@ import { AddclubComponent } from './addclub/addclub.component';
 import { AdminComponent } from './admin/admin.component';
 import { ClubsComponent } from './clubs/clubs.component';
 
-
+import { FormsModule } from '@angular/forms';
+import { ApprouveComponent } from './approuve/approuve.component';
+import { ClaimsComponent } from './claims/claims.component';
+import { AddclaimComponent } from './addclaim/addclaim.component';
+import { UserComponent } from './user/user.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +37,24 @@ import { ClubsComponent } from './clubs/clubs.component';
         AddclubComponent,
         AdminComponent,
         ClubsComponent,
+        ApprouveComponent,
+        ClaimsComponent,
+        AddclaimComponent,
+        UserComponent,
+        UsersComponent,
+       
+        
+       
    
    
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    BrowserModule, 
+    AppRoutingModule, 
+    FormsModule
+    ]
+
+    ,
   providers: [],
   bootstrap: [AppComponent]
 })

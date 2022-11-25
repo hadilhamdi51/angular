@@ -20,25 +20,34 @@
                   <div class="card-body">
   
                     <div class="pt-4 pb-2">
-                      <h5 class="card-title text-center pb-0 fs-4">Add Your Club</h5>
-                      <p class="text-center small">Enter your personal details to create club</p>
+                      <h5 class="card-title text-center pb-0 fs-4">Add Your Request</h5>
+                      <p class="text-center small">Enter your personal details to create request</p>
                     </div>
   
                     <form class="row g-3 needs-validation" novalidate>
                       <div class="col-12">
-                        <label for="yourName" class="form-label">Your Club's name</label>
-                        <input type="text"[(ngModel)]= "newClub.nom" name="name" class="form-control" id="yourName" required>
-                        <div class="invalid-feedback">Please, enter your Club's name!</div>
+                        <label for="yourName" class="form-label">Your name</label>
+                        <input type="text" name="name" class="form-control" id="yourName" required>
+                        <div class="invalid-feedback">Please, enter your name!</div>
                       </div>
   
-                      
+                     
+                      <div class="col-12">
+                        <label for="yourUsername" class="form-label">Your Email</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend">@</span>
+                          <input type="text" name="username" class="form-control" >
+                          <div class="invalid-feedback">Please, enter your email!</div>
+                        </div>
+                      </div>
   
                       <div class="col-12">
                         <label for="yourPassword" class="form-label">description</label>
-                        <input type="text"[(ngModel)]= "newClub.description" name="name" class="form-control" >
+                        <input type="text" name="name" class="form-control" >
 
                        
                       </div>
+
 
                       <div class="col-12">
                         <label for="avatar" class="form-label">Choose a club logo</label>
@@ -55,7 +64,7 @@
                         </div>
                       </div>
                       <div class="col-12">
-                      <a routerLink="/clubs">  <button class="btn btn-primary w-100" type="submit"  (click)="addClub()">Add Club</button></a>
+                      <a routerLink="/claims">  <button class="btn btn-primary w-100" type="submit" (click)="addClaim()">Add Request</button></a>
                       </div>
                      
                     </form>
@@ -85,6 +94,4 @@
     
   
   </body>
-  
-
   
