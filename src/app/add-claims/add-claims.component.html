@@ -1,0 +1,54 @@
+<main id="main" class="main">
+
+  <div class="pagetitle">
+    <h1>Create Claim</h1>
+   
+  </div><!-- End Page Title -->
+
+  <section class="section dashboard">
+
+    
+<div style="width: 400px;">
+  <form (ngSubmit)="save()">
+    <div class="col-12">
+      <label for="nomc" class="form-label">nom du club</label>
+      <input type="text" class="form-control" id="nomc" required [(ngModel)]="claim.nomc" name="nomc">
+
+
+    </div>
+    
+    <div class="col-12">
+      <label for="description" class="form-label">description</label>
+      <textarea class="form-control" id="description" required [(ngModel)]="claim.description" name="description"></textarea>
+
+
+    </div>
+<br><br>
+   
+   
+    <button type="submit" class="btn btn-primary w-100" >Submit</button>
+  </form>
+</div>
+    <div class="row">
+
+      <!-- Left side columns -->
+      <div class="col-lg-8">
+        <div class="row">
+
+          
+
+          
+
+           
+
+         
+         
+
+        </div>
+      </div><!-- End Left side columns -->
+
+
+    </div>
+  </section>
+
+</main><!-- End #main -->

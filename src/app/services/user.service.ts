@@ -1,20 +1,22 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { User } from '../model/user.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  users : User[]; 
-  constructor() {
-  this.users = [
-  { idUser : 1, nom : "Hadil", email : "hadil@gmail.com",avatar:"assets/img/tun.png"},
-  ];
-  } 
-  listeUsers():User[] { 
-  return this.users;
+
+ 
+  private baseUrl = 'http://localhost:8089/users/';  
+
+  constructor(private http:HttpClient) { }  
+  
+  getUser(id: number): Observable<any> {
+    var headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+    return this.http.get(`${this.baseUrl}get/${id}`,{headers});
   }
-  ajouterUser( usr: User){ 
-  this.users.push(usr);
-  }
-  }
+
+  
+}

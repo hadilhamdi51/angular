@@ -1,0 +1,66 @@
+<main id="main" class="main">
+
+  <div class="pagetitle">
+
+   
+  </div><!-- End Page Title -->
+
+  <section class="section dashboard">
+
+    
+<div style="width: 400px;">
+  <h3>Update Formation</h3>
+
+  <form (ngSubmit)="updateFormation()">
+
+    <div class="form-group">
+        <label for="name">name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="formation.name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="datef" class="form-label">date debut formation</label>
+        <input type="date" class="form-control" id="datef" required [(ngModel)]="formation.datef" name="datef">
+    
+    
+      </div>
+      <div class="form-group">
+        <label for="type"  class="form-label">type</label>
+  
+        <select class="form-select" id="type" required [(ngModel)]="formation.type" name="type">
+          <option value="interne">interne</option>
+          <option value="externe">externe</option>
+        </select>
+   
+      </div>
+      <div class="form-group">
+        <label for="description" class="form-label">description</label>
+        <textarea class="form-control" id="description" required [(ngModel)]="formation.description" name="description"></textarea>
+      </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>
+    <div class="row">
+
+      <!-- Left side columns -->
+      <div class="col-lg-8">
+        <div class="row">
+
+          
+
+          
+
+           
+
+         
+         
+
+        </div>
+      </div><!-- End Left side columns -->
+
+
+    </div>
+  </section>
+
+</main><!-- End #main -->

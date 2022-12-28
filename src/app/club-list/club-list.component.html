@@ -1,0 +1,71 @@
+
+
+
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h2>Club List</h2>
+    </div><!-- End Page Title -->
+    <td>
+      <a class="btn btn-primary"  [routerLink]="['/add-club']">Ajouter</a></td>
+  
+  <br>
+    <section class="section dashboard"> 
+      
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+                              
+              <th>name</th>
+              <th>image</th>
+              <th>description</th>
+              <th>responsable</th>
+              <th>Actions</th>
+                          
+            </tr>
+          </thead>
+      
+          <tbody>
+            <tr *ngFor="let club of clubs | async">
+          
+              <td>{{club.nom}}</td>
+              <td>{{club.image}}</td>
+              <td>{{club.description}}</td>
+              <td>{{club.resp}}</td>
+             
+              <td> <button   class="btn btn-primary btn-sm" style="margin-left: 10px"> <a class="btn btn-primary btn-sm"   [routerLink]="['/update-formation',club.id]">Modifier</a></button></td>
+              <td> <button   class="btn btn-primary btn-sm" style="margin-left: 10px" (click)="(club.id)"> Supprimer</button></td>
+              
+           
+            </tr>
+           
+          </tbody>
+          
+        </table>
+   
+  </div>
+      <div class="row">
+  
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+  
+            
+  
+            
+  
+             
+  
+           
+           
+  
+          </div>
+        </div><!-- End Left side columns -->
+  
+  
+      </div>
+    </section>
+  
+  </main><!-- End #main -->

@@ -1,0 +1,65 @@
+<main id="main" class="main">
+
+  <div class="pagetitle">
+    <h2>Claim List</h2>
+  </div><!-- End Page Title -->
+  <td>
+    <a class="btn btn-primary"  [routerLink]="['/add-claims']">Ajouter</a></td>
+
+<br>
+  <section class="section dashboard"> 
+    
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+                            
+            <th>nom club</th>
+            <th>description</th>
+            <th>date</th>
+            <th>Actions</th>
+                        
+          </tr>
+        </thead>
+    
+        <tbody>
+          
+          <tr *ngFor="let claim of claims | async">
+        
+            <td>{{claim.nomc}}</td>
+            <td>{{claim.description}}</td>
+            <td>{{claim.dated}}</td>
+           
+            <td> <button   class="btn btn-primary btn-sm" style="margin-left: 10px" (click)="approuver(claim.id)"> Approuver</button></td>
+            <td> <button   class="btn btn-primary btn-sm" style="margin-left: 10px" (click)="desapprouver(claim.id)"> Desapprouver</button></td>
+         
+          </tr>
+         
+        </tbody>
+        
+      </table>
+ 
+</div>
+    <div class="row">
+
+      <!-- Left side columns -->
+      <div class="col-lg-8">
+        <div class="row">
+
+          
+
+          
+
+           
+
+         
+         
+
+        </div>
+      </div><!-- End Left side columns -->
+
+
+    </div>
+  </section>
+
+</main><!-- End #main -->
