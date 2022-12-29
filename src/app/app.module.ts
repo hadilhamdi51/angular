@@ -35,6 +35,9 @@ import { FormulaireInscriptionComponent } from './formulaire-inscription/formula
 import { ClubListComponent } from './club-list/club-list.component';
 import { UserComponent } from './user/user.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FacebookLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
+import { LogComponent } from './log/log.component';
+
 
 
 
@@ -71,20 +74,40 @@ import { ReactiveFormsModule } from '@angular/forms';
         MesdemandeComponent,
         FormulaireInscriptionComponent,
         ClubListComponent,
-        UserComponent
+        UserComponent,
+        LogComponent,
        
        
    
    
   ],
   imports: [
+   
     BrowserModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    SocialLoginModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+         
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('5663581440344409')
+          }
+        ],
+        onError: (err) => {
+          console.error(err);
+        }
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -21,6 +21,8 @@ import { MesdemandeComponent } from './mesdemande/mesdemande.component';
 import { FormulaireInscriptionComponent } from './formulaire-inscription/formulaire-inscription.component';
 import { ClubListComponent } from './club-list/club-list.component';
 import { AuthModule } from './auth/auth.module';
+import { LogComponent } from './log/log.component';
+
 
 
 
@@ -48,6 +50,8 @@ const routes: Routes = [
 { path: "", redirectTo: "actualite", pathMatch: "full" },
 {path: "addclub", component : AddclubComponent},
 {path: "admin", component : AdminComponent},
+{path: "log", component : LogComponent},
+
 {path: "auth",loadChildren:()=>import('./auth/auth.module').then(m=>m.AuthModule)},
 
 
